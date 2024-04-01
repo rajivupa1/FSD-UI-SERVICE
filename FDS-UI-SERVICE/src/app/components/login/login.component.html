@@ -1,0 +1,48 @@
+<div class="body-style">
+    <h2>Login to your Account</h2>
+
+    <div>
+        <form class="row">
+    
+            <div class="col-md-6 col-12 form-group input-field-container">
+                <label for="mob" class="input-label">Email Address</label>
+                <input type="text" class="input-field" id="mob" pattern="^\d{10}$" formControlName="email"  placeholder="" data_target="dob"
+                    data_target_prev="" />
+                <div class="text-danger">
+                    <div *ngIf="landingForm.controls['mobileNumber']?.touched
+                    && landingForm.controls['mobileNumber']?.value == ''">
+                        Email Address is mandatory
+                    </div>
+                    <div *ngIf="landingForm.controls['mobileNumber'].hasError('pattern')">
+                        Please provide a valid email address
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-12 form-group input-field-container paading-level">
+                <label for="mob" class="input-label">Your Password</label>
+                <input type="password" class="input-field" id="mob" pattern="^\d{10}$" formControlName="password"  placeholder="" data_target="dob"
+                    data_target_prev="" />
+                <div class="text-danger">
+                    <div *ngIf="landingForm.controls['mobileNumber']?.touched
+                    && landingForm.controls['mobileNumber']?.value == ''">
+                        Password is mandatory
+                    </div>
+                    <div *ngIf="landingForm.controls['mobileNumber'].hasError('pattern')">
+                        Please provide a valid password
+                    </div>
+                </div>
+            </div>
+
+            <div class="proceed-btn col-12 mt-4 paading-level">
+                <button type="button" id="next" class="btn col-md-5 col-12  proceedNext" (click)="proceedNext()">
+                        Login
+                </button>
+            </div>
+
+             <div style="margin-top: 30px">Don't have and account? <a href="">Ragister</a></div>
+    
+        </form>
+    </div>
+
+</div>
